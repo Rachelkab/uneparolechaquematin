@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Une Parole Chaque Matin - Souscription</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS for Inter font and potential overrides -->
+    <link rel="stylesheet" href="css/styles.min.css">
+    <style>
+        /* Custom Tailwind Configuration (optional, if needed beyond default) */
+        :root {
+            --color-amber-700: #D97706;
+            --color-amber-800: #b46304;
+            --color-amber-600: #f59e0b;
+            --color-amber-100: #fffbeb;
+        }
+        .bg-amber-700 { background-color: var(--color-amber-700); }
+        .bg-amber-800 { background-color: var(--color-amber-800); }
+        .bg-amber-600 { background-color: var(--color-amber-600); }
+        .bg-amber-100 { background-color: var(--color-amber-100); }
+        .text-amber-800 { color: var(--color-amber-800); }
+        .text-amber-700 { color: var(--color-amber-700); }
+        .hover\:bg-amber-700:hover { background-color: var(--color-amber-700); }
+        .hover\:text-amber-200:hover { color: #fde68a; }
+    </style>
+</head>
+<body class="font-inter bg-gray-50 text-gray-800 antialiased">
+    <!-- Header Section (reused from index.html) -->
+    <header class="bg-amber-700 text-white shadow-xl sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Project Name/Logo -->
+            <a href="index.html" class="flex items-center space-x-3 transform hover:scale-105 transition-transform duration-300">
+                <!-- Logo Placeholder -->
+                <img src="images/logo.png" alt="Une Parole Chaque Matin Logo" class="h-10 w-10 rounded-full shadow-md">
+                <span class="text-3xl font-extrabold tracking-tight">Une Parole Chaque Matin</span>
+            </a>
+            
+            <!-- Navigation Menu (Desktop) -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-lg font-medium hover:text-amber-200 transition-colors duration-300 relative group">
+                    Accueil
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-200 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="about.html" class="text-lg font-medium hover:text-amber-200 transition-colors duration-300 relative group">
+                    À Propos
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-200 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="subscribe.html" class="text-lg font-medium hover:text-amber-200 transition-colors duration-300 relative group">
+                    Souscription
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-amber-200"></span> <!-- Active indicator -->
+                </a>
+                <a href="contact.html" class="text-lg font-medium hover:text-amber-200 transition-colors duration-300 relative group">
+                    Contact
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-200 group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </nav>
+
+            <!-- Hamburger Menu Icon (Mobile) -->
+            <div class="md:hidden">
+                <button id="menu-button" class="text-white focus:outline-none p-2 rounded-md hover:bg-amber-600 transition-colors duration-300" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden bg-amber-800 py-4 shadow-inner">
+            <nav class="flex flex-col items-center space-y-4">
+                <a href="index.html" class="block text-white text-lg font-medium hover:text-amber-200 transition-colors duration-300 py-2 w-full text-center">Accueil</a>
+                <a href="about.html" class="block text-white text-lg font-medium hover:text-amber-200 transition-colors duration-300 py-2 w-full text-center">À Propos</a>
+                <a href="subscribe.html" class="block text-white text-lg font-medium hover:text-amber-200 transition-colors duration-300 py-2 w-full text-center bg-amber-700/20 rounded-md">Souscription</a> <!-- Active indicator -->
+                <a href="contact.html" class="block text-white text-lg font-medium hover:text-amber-200 transition-colors duration-300 py-2 w-full text-center">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container mx-auto px-6 py-16 md:py-24">
+        <!-- Subscription Hero Section -->
+        <section class="text-center mb-20 relative overflow-hidden rounded-3xl bg-gradient-to-br from-amber-50 to-amber-100 p-8 md:p-16 shadow-2xl">
+            <div class="absolute inset-0 bg-pattern opacity-10 pointer-events-none"></div>
+            <h1 class="text-6xl md:text-7xl font-extrabold text-amber-800 leading-tight mb-8 drop-shadow-lg">
+                Abonnez-vous Gratuitement !
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                Recevez votre verset biblique quotidien directement par SMS, chaque matin.
+            </p>
+        </section>
+
+        <!-- Subscription Process Section -->
+        <section class="max-w-3xl mx-auto bg-white p-10 rounded-3xl shadow-xl border border-amber-100 mb-20">
+            <h2 class="text-4xl font-bold text-amber-800 mb-8 text-center">Comment Ça Marche ?</h2>
+            
+            <div class="space-y-10">
+                <!-- Subscribe Section -->
+                <div class="flex flex-col md:flex-row items-center md:space-x-8 bg-amber-50 p-6 rounded-2xl shadow-md border border-amber-100">
+                    <div class="flex-shrink-0 mb-6 md:mb-0">
+                        <div class="w-20 h-20 bg-amber-600 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-lg">📥</div>
+                    </div>
+                    <div class="text-center md:text-left flex-grow">
+                        <h3 class="text-3xl font-semibold text-amber-700 mb-3">Pour S'abonner :</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            Envoyez un SMS au <a href="https://wa.me/14352631283" class="numero">14352631283</a>,  dans le format suivant :
+                        </p>
+                        <div class="bg-gray-100 p-4 rounded-lg font-mono text-gray-800 text-lg overflow-x-auto">
+                            <pre><code>VERS VotrePrénom</code></pre>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-2">
+                            Exemple : <code class="font-mono">VERS John</code>
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed mt-4">
+                            Dès l'envoi, votre numéro et votre prénom seront enregistrés, et vous commencerez à recevoir votre message quotidien. Vous recevrez également un message de bienvenue.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Unsubscribe Section -->
+                <div class="flex flex-col md:flex-row items-center md:space-x-8 bg-amber-50 p-6 rounded-2xl shadow-md border border-amber-100">
+                    <div class="flex-shrink-0 mb-6 md:mb-0">
+                        <div class="w-20 h-20 bg-amber-600 rounded-full flex items-center justify-center text-white text-4xl font-bold shadow-lg">📤</div>
+                    </div>
+                    <div class="text-center md:text-left flex-grow">
+                        <h3 class="text-3xl font-semibold text-amber-700 mb-3">Pour Se Désabonner :</h3>
+                        <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                            Pour ne plus recevoir les messages, il vous suffit de répondre par SMS avec le mot :
+                        </p>
+                        <div class="bg-gray-100 p-4 rounded-lg font-mono text-gray-800 text-lg overflow-x-auto">
+                            <pre><code>STOP</code></pre>
+                        </div>
+                        <p class="text-lg text-gray-700 leading-relaxed mt-4">
+                            Votre numéro sera discrètement retiré de la liste de distribution. Aucun SMS de confirmation ne sera envoyé pour minimiser les coûts.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing and Schedule Section -->
+        <section class="max-w-4xl mx-auto bg-amber-100 p-10 rounded-3xl shadow-inner border border-amber-200 mb-20 text-center">
+            <h2 class="text-4xl font-bold text-amber-800 mb-8">Informations Clés</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-amber-100">
+                    <h3 class="text-2xl font-semibold text-amber-700 mb-3">Coût du Service</h3>
+                    <p class="text-xl text-gray-700 font-bold">GRATUIT</p>
+                    <p class="text-gray-600 mt-2">Aucun frais pour les abonnés.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-amber-100">
+                    <h3 class="text-2xl font-semibold text-amber-700 mb-3">Fréquence & Heure</h3>
+                    <p class="text-xl text-gray-700 font-bold">Quotidien</p>
+                    <p class="text-gray-600 mt-2">Chaque matin à 6:00 AM GMT.</p>
+                </div>
+            </div>
+            <p class="text-lg text-gray-700 mt-8">
+                Le service est entièrement gratuit pour vous, car notre objectif est de partager la Parole de Dieu sans barrière.
+            </p>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="text-center bg-amber-100 p-12 rounded-3xl shadow-inner max-w-4xl mx-auto border border-amber-200">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-amber-800 mb-6 leading-tight">
+                Prêt à transformer vos matins ?
+            </h2>
+            <p class="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto">
+                Commencez votre voyage spirituel avec "Une Parole Chaque Matin" dès aujourd'hui.
+            </p>
+            <a href="contact.html" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-10 rounded-full shadow-xl transition-all duration-300 transform hover:scale-105 hover:ring-4 hover:ring-amber-300 focus:outline-none focus:ring-4 focus:ring-amber-300">
+                Des Questions ? Contactez-nous !
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer Section (reused from index.html) -->
+    <footer class="bg-amber-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-6 text-lg">&copy; 2025 Une Parole Chaque Matin. Tous droits réservés.</p>
+            <nav class="flex justify-center space-x-8">
+                <a href="about.html" class="text-lg hover:text-amber-200 transition-colors duration-300">À Propos</a>
+                <a href="subscribe.html" class="text-lg hover:text-amber-200 transition-colors duration-300">Souscription</a>
+                <a href="contact.html" class="text-lg hover:text-amber-200 transition-colors duration-300">Contact</a>
+            </nav>
+            <div class="mt-8 text-sm text-amber-200">
+                <p>Un rappel. Une réponse. Une direction.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to the JavaScript file -->
+    <script src="css/styles.min.css"></script>
+</body>
+</html>

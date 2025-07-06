@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Une Parole Chaque Matin - Accueil</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS for Inter font and potential overrides -->
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/fav_icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/fav_icon.png">   
+    <link rel="icon" sizes="192x192" href="images/fav_icon.png">
+    <style>
+        /* Custom Tailwind Configuration (optional, if needed beyond default) */
+        /* This allows you to extend Tailwind's default theme */
+        :root {
+            --color-amber-700: #D97706;
+            --color-amber-800: #b46304;
+            --color-amber-600: #f59e0b;
+            --color-amber-100: #fffbeb;
+        }
+        .bg-amber-700 { background-color: var(--color-amber-700); }
+        .bg-amber-800 { background-color: var(--color-amber-800); }
+        .bg-amber-600 { background-color: var(--color-amber-600); }
+        .bg-amber-100 { background-color: var(--color-amber-100); }
+        .text-amber-800 { color: var(--color-amber-800); }
+        .text-amber-700 { color: var(--color-amber-700); }
+        .hover\:bg-amber-700:hover { background-color: var(--color-amber-700); }
+        .hover\:text-amber-200:hover { color: #fde68a; } /* Lighter amber for hover */
+    </style>
+</head>
+<body class="font-inter bg-gray-50 text-gray-800 antialiased">
+    <!-- Header Section -->
+    <header class="bg-amber-700 text-white shadow-xl sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Project Name/Logo -->
+            <a href="index.html" class="flex items-center space-x-3 transform hover:scale-105 transition-transform duration-300">
+                <!-- Logo Placeholder -->
+                <img src="images/logo.png" alt="Une Parole Chaque Matin Logo" class="h-10 w-10 rounded-full shadow-md">
+                <span class="text-3xl font-extrabold tracking-tight">Une Parole Chaque Matin</span>
+            </a>
+            
+            <!-- Navigation Menu (Desktop) -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-lg font-medium hover:text-amber-200 transition-colors duration-300 relative group">
+                    Accueil
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-200 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="about.html" class="text-lg font-medium hover:text-amber-200 transition-colors duration-300 relative group">
+                    À Propos
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-200 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="subscribe.html" class="text-lg font-medium hover:text-amber-200 transition-colors duration-300 relative group">
+                    Souscription
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-200 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="contact.html" class="text-lg font-medium hover:text-amber-200 transition-colors duration-300 relative group">
+                    Contact
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-200 group-hover:w-full transition-all duration-300"></span>
+                </a>
+            </nav>
+
+            <!-- Hamburger Menu Icon (Mobile) -->
+            <div class="md:hidden">
+                <button id="menu-button" class="text-white focus:outline-none p-2 rounded-md hover:bg-amber-600 transition-colors duration-300" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden bg-amber-800 py-4 shadow-inner">
+            <nav class="flex flex-col items-center space-y-4">
+                <a href="index.html" class="block text-white text-lg font-medium hover:text-amber-200 transition-colors duration-300 py-2 w-full text-center">Accueil</a>
+                <a href="about.html" class="block text-white text-lg font-medium hover:text-amber-200 transition-colors duration-300 py-2 w-full text-center">À Propos</a>
+                <a href="subscribe.html" class="block text-white text-lg font-medium hover:text-amber-200 transition-colors duration-300 py-2 w-full text-center">Souscription</a>
+                <a href="contact.html" class="block text-white text-lg font-medium hover:text-amber-200 transition-colors duration-300 py-2 w-full text-center">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container mx-auto px-6 py-16 md:py-24">
+        <!-- Hero Section -->
+        <section class="text-center mb-20 relative overflow-hidden rounded-3xl bg-gradient-to-br from-amber-50 to-amber-100 p-8 md:p-16 shadow-2xl">
+            <div class="absolute inset-0 bg-pattern opacity-10 pointer-events-none"></div>
+            <h1 class="text-6xl md:text-7xl font-extrabold text-amber-800 leading-tight mb-8 drop-shadow-lg">
+                Un rappel. Une réponse. Une direction.
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto mb-12 leading-relaxed">
+                "Une Parole Chaque Matin" est un service SMS quotidien gratuit qui vous envoie un verset biblique chaque matin à 6h00 GMT en République Démocratique du Congo. Laissez la Parole de Dieu illuminer votre journée et guider vos pas.
+            </p>
+            <a href="subscribe.html" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-10 rounded-full shadow-xl transition-all duration-300 transform hover:scale-105 hover:ring-4 hover:ring-amber-300 focus:outline-none focus:ring-4 focus:ring-amber-300">
+                S'abonner Maintenant
+            </a>
+        </section>
+
+        <!-- Image Gallery Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-20">
+            <div class="rounded-3xl shadow-2xl overflow-hidden transform hover:scale-102 transition-transform duration-300 group">
+                <img src="images/open_bible.jpg" alt="Bible ouverte avec lumière divine" class="w-full h-72 md:h-96 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                <div class="p-6 bg-white bg-opacity-90 backdrop-blur-sm">
+                    <h3 class="text-2xl font-bold text-amber-800 mb-2">La Source d'Inspiration</h3>
+                    <p class="text-gray-700">Chaque matin, un verset soigneusement choisi pour éclairer votre chemin.</p>
+                </div>
+            </div>
+            <div class="rounded-3xl shadow-2xl overflow-hidden transform hover:scale-102 transition-transform duration-300 group">
+                <img src="images/morning_sunrise_coffee.jpg" alt="Lever du soleil paisible sur un paysage africain" class="w-full h-72 md:h-96 object-cover transform group-hover:scale-105 transition-transform duration-500">
+                <div class="p-6 bg-white bg-opacity-90 backdrop-blur-sm">
+                    <h3 class="text-2xl font-bold text-amber-800 mb-2">Un Nouveau Départ</h3>
+                    <p class="text-gray-700">Commencez chaque journée avec un message d'espoir et de direction.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Purpose/Benefit Section -->
+        <section class="text-center max-w-5xl mx-auto mb-20">
+            <h2 class="text-5xl font-extrabold text-amber-800 mb-12 drop-shadow-md">Pourquoi la Parole Chaque Matin ?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-xl border border-amber-100 transform hover:translate-y-[-10px] transition-transform duration-300 group">
+                    <div class="text-amber-700 text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">💡</div>
+                    <h3 class="text-xl font-semibold text-amber-700 mb-3">Un moment de vérité</h3>
+                    <p class="text-gray-600 leading-relaxed">Recevez une parole divine qui peut vous apporter conviction, réconfort ou clarté dans votre quotidien.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl border border-amber-100 transform hover:translate-y-[-10px] transition-transform duration-300 group">
+                    <div class="text-amber-700 text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🌅</div>
+                    <h3 class="text-xl font-semibold text-amber-700 mb-3">Un réveil spirituel</h3>
+                    <p class="text-gray-600 leading-relaxed">Commencez votre journée avec un message inspirant qui nourrit votre âme et éveille votre esprit.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl border border-amber-100 transform hover:translate-y-[-10px] transition-transform duration-300 group">
+                    <div class="text-amber-700 text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">💪</div>
+                    <h3 class="text-xl font-semibold text-amber-700 mb-3">Un encouragement</h3>
+                    <p class="text-gray-600 leading-relaxed">Trouvez la force, l'espoir et la persévérance nécessaires pour traverser les défis de la vie.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-xl border border-amber-100 transform hover:translate-y-[-10px] transition-transform duration-300 group">
+                    <div class="text-amber-700 text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">🧭</div>
+                    <h3 class="text-xl font-semibold text-amber-700 mb-3">Une direction quotidienne</h3>
+                    <p class="text-gray-600 leading-relaxed">Laissez la sagesse de la Parole de Dieu guider vos pas et éclairer vos décisions chaque jour.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="text-center bg-amber-100 p-12 rounded-3xl shadow-inner max-w-4xl mx-auto border border-amber-200">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-amber-800 mb-6 leading-tight">
+                Prêt à recevoir votre dose quotidienne d'inspiration ?
+            </h2>
+            <p class="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto">
+                C'est simple, entièrement gratuit et conçu pour transformer votre quotidien. Rejoignez des milliers de personnes en RDC.
+            </p>
+            <a href="subscribe.html" class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-4 px-10 rounded-full shadow-xl transition-all duration-300 transform hover:scale-105 hover:ring-4 hover:ring-amber-300 focus:outline-none focus:ring-4 focus:ring-amber-300">
+                Je m'abonne dès maintenant !
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-amber-800 text-white py-10">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-6 text-lg">&copy; 2025 Une Parole Chaque Matin. Tous droits réservés.</p>
+            <nav class="flex justify-center space-x-8">
+                <a href="about.html" class="text-lg hover:text-amber-200 transition-colors duration-300">À Propos</a>
+                <a href="subscribe.html" class="text-lg hover:text-amber-200 transition-colors duration-300">Souscription</a>
+                <a href="contact.html" class="text-lg hover:text-amber-200 transition-colors duration-300">Contact</a>
+            </nav>
+            <div class="mt-8 text-sm text-amber-200">
+                <p>Un rappel. Une réponse. Une direction.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to the JavaScript file -->
+    <script src="scripts/script.js"></script>
+</body>
+</html>

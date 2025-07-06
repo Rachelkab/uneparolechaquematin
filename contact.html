@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Une Parole Chaque Matin - Contact</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS for Inter font and potential overrides -->
+    <link rel="stylesheet" href="css/styles.min.css">
+    <style>
+        /* Custom Tailwind Configuration (optional, if needed beyond default) */
+        :root {
+            --color-amber-700: #D97706;
+            --color-amber-800: #b46304;
+            --color-amber-600: #f59e0b;
+            --color-amber-100: #fffbeb;
+        }
+        .bg-amber-700 { background-color: var(--color-amber-700); }
+        .bg-amber-800 { background-color: var(--color-amber-800); }
+        .bg-amber-600 { background-color: var(--color-amber-600); }
+        .bg-amber-100 { background-color: var(--color-amber-100); }
+        .text-amber-800 { color: var(--color-amber-800); }
+        .text-amber-700 { color: var(--color-amber-700); }
+        .hover\:bg-amber-700:hover { background-color: var(--color-amber-700); }
+        .hover\:text-amber-200:hover { color: #fde68a; }
+    </style>
+</head>
+<body class="font-inter bg-gray-50 text-gray-800 antialiased">
+    <!-- Header Section (reused from index.html) -->
+    <header class="bg-amber-700 text-white shadow-xl sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Project Name/Logo -->
+            <a href="index.html" class="flex items-center space-x-3 transform hover:scale-105 transition-transform duration-300">
+                <!-- Logo Placeholder -->
+                <img src="images/logo.png" alt="Une Parole Chaque Matin Logo" class="h-10 w-10 rounded-full shadow-md">
+                <span class="text-3xl font-extrabold tracking-tight">Une Parole Chaque Matin</span>
+            </a>
+            
+            <!-- Navigation Menu (Desktop) -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-lg font-medium hover:text-amber-200 transition-colors duration-300 relative group">
+                    Accueil
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-200 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="about.html" class="text-lg font-medium hover:text-amber-200 transition-colors duration-300 relative group">
+                    À Propos
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-200 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="subscribe.html" class="text-lg font-medium hover:text-amber-200 transition-colors duration-300 relative group">
+                    Souscription
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-200 group-hover:w-full transition-all duration-300"></span>
+                </a>
+                <a href="contact.html" class="text-lg font-medium hover:text-amber-200 transition-colors duration-300 relative group">
+                    Contact
+                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-amber-200"></span> <!-- Active indicator -->
+                </a>
+            </nav>
+
+            <!-- Hamburger Menu Icon (Mobile) -->
+            <div class="md:hidden">
+                <button id="menu-button" class="text-white focus:outline-none p-2 rounded-md hover:bg-amber-600 transition-colors duration-300" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden bg-amber-800 py-4 shadow-inner">
+            <nav class="flex flex-col items-center space-y-4">
+                <a href="index.html" class="block text-white text-lg font-medium hover:text-amber-200 transition-colors duration-300 py-2 w-full text-center">Accueil</a>
+                <a href="about.html" class="block text-white text-lg font-medium hover:text-amber-200 transition-colors duration-300 py-2 w-full text-center">À Propos</a>
+                <a href="subscribe.html" class="block text-white text-lg font-medium hover:text-amber-200 transition-colors duration-300 py-2 w-full text-center">Souscription</a>
+                <a href="contact.html" class="block text-white text-lg font-medium hover:text-amber-200 transition-colors duration-300 py-2 w-full text-center bg-amber-700/20 rounded-md">Contact</a> <!-- Active indicator -->
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container mx-auto px-6 py-16 md:py-24">
+        <!-- Contact Hero Section -->
+        <section class="text-center mb-20 relative overflow-hidden rounded-3xl bg-gradient-to-br from-amber-50 to-amber-100 p-8 md:p-16 shadow-2xl">
+            <div class="absolute inset-0 bg-pattern opacity-10 pointer-events-none"></div>
+            <h1 class="text-6xl md:text-7xl font-extrabold text-amber-800 leading-tight mb-8 drop-shadow-lg">
+                Contactez-Nous
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                Nous sommes là pour vous écouter, vous soutenir et partager vos témoignages.
+            </p>
+        </section>
+
+        <!-- Contact Information Section -->
+        <section class="max-w-3xl mx-auto bg-white p-10 rounded-3xl shadow-xl border border-amber-100 mb-20 text-center">
+            <h2 class="text-4xl font-bold text-amber-800 mb-8">Restons Connectés</h2>
+            <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                Pour toute question, demande de prière ou pour partager votre témoignage, veuillez nous contacter via WhatsApp. C'est le moyen le plus rapide et le plus efficace de vous répondre, tout en nous aidant à maintenir la gratuité de notre service SMS.
+            </p>
+            
+            <div class="flex flex-col items-center space-y-6">
+                <div class="flex items-center space-x-4 bg-amber-50 p-4 rounded-xl shadow-md border border-amber-100 w-full max-w-sm justify-center">
+                    <a href="https://wa.me/14352631283">
+                        <img src="images/whatsapp_logo.png" alt="WhatsApp logo">
+                    </a>
